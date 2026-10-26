@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Clase 7 - PARSEÑAS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="base.css?v=alfa-mascota-position-4">
+ <link rel="stylesheet" href="clase-steps.css">
+ <script defer src="inicio.js?v=alfa-pet-upload-1"></script>
+ <script defer src="clase-steps.js?v=alfa-mascota-position-2"></script>
+</head>
+<body class="theme-dark">
+
+<header class="top-bar" aria-label="Navegación principal"><a href="index.html" class="brand-label">PARSEÑAS</a><nav class="menu-rectangulo" aria-label="Secciones"><a href="index.html#top">Inicio</a><a href="index.html#clases">Clases</a><a href="index.html#contacto">Contáctanos</a></nav><form class="search-form" action="index.html#clases" method="get" role="search"><input class="search-input" name="q" type="search" placeholder="Buscar palabra o una clase..." aria-label="Buscar"><button class="search-btn" type="submit" aria-label="Buscar">&#128269;</button></form><div class="auth-actions" id="auth-actions"><a href="register.html" class="auth-btn" id="btn-registrarme">Registrarme</a><a href="login.html" class="auth-btn" id="btn-login">Iniciar sesión</a><span class="user-greeting" id="user-greeting" hidden></span></div><div class="profile-menu-wrapper" hidden><button type="button" id="profile-btn" aria-label="Abrir preferencias" aria-expanded="false">⚙</button><div class="profile-menu" id="profile-menu" hidden><p class="profile-menu-title">Preferencias</p><label class="profile-option" for="theme-toggle"><span>Tema claro</span><input type="checkbox" id="theme-toggle"></label><label class="profile-option" for="font-size-select"><span>Tamaño de texto</span><select id="font-size-select"><option value="normal">Normal</option><option value="large">Grande</option><option value="xl">Muy grande</option></select></label><div class="profile-menu-actions"><button type="button" class="profile-action-btn" id="toggle-mascota-btn">Ocultar mascota</button><a href="perfil.html" class="profile-action-btn" id="link-perfil">Editar perfil</a><a href="cerrar_sesion.php" class="profile-action-btn" id="link-logout">Cerrar sesión</a></div></div></div></header>
+
+<main>
+<div class="lesson-shell" data-lesson="7" data-total="9" data-current="1" data-authenticated="0" data-evaluation-failed="0">
+
+ <header class="lesson-heading">
+    <span class="section-label">Clase 7</span>
+    <h1>Las Emociones</h1>
+    <p>Aprende a expresar cómo te sientes, a reconocer emociones en los demás y a responder con empatía en LSC.</p>
+ </header>
+
+ <div class="lesson-progress-wrap">
+    <div class="lesson-progress" role="progressbar" aria-label="Progreso de la clase" aria-valuemin="0" aria-valuemax="100" aria-valuenow="11">
+      <div class="lesson-progress-bar" id="lesson-progress-bar" style="width: 11%"></div>
+    </div>
+    <p class="lesson-progress-label">
+      Paso <span id="lesson-step-value">1</span> de 9 —
+      <span id="lesson-progress-value">11</span>% completado
+    </p>
+ </div>
+
+ <ol class="lesson-steps-nav" id="lesson-steps-nav" aria-label="Pasos de la clase">
+        <li><button type="button" class="lesson-step-dot is-active" data-goto="1" aria-label="Ir al paso 1: Objetivo de la clase"><span class="lesson-step-dot-number">1</span><span class="lesson-step-dot-title">Objetivo de la clase</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="2" disabled aria-label="Ir al paso 2: Introducción"><span class="lesson-step-dot-number">2</span><span class="lesson-step-dot-title">Introducción</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="3" disabled aria-label="Ir al paso 3: Emociones básicas"><span class="lesson-step-dot-number">3</span><span class="lesson-step-dot-title">Emociones básicas</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="4" disabled aria-label="Ir al paso 4: El rostro como gramática"><span class="lesson-step-dot-number">4</span><span class="lesson-step-dot-title">El rostro como gramática</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="5" disabled aria-label="Ir al paso 5: ¿Cómo te sientes?"><span class="lesson-step-dot-number">5</span><span class="lesson-step-dot-title">¿Cómo te sientes?</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="6" disabled aria-label="Ir al paso 6: Responder con empatía"><span class="lesson-step-dot-number">6</span><span class="lesson-step-dot-title">Responder con empatía</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="7" disabled aria-label="Ir al paso 7: Práctica guiada"><span class="lesson-step-dot-number">7</span><span class="lesson-step-dot-title">Práctica guiada</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="8" disabled aria-label="Ir al paso 8: Resumen de la lección"><span class="lesson-step-dot-number">8</span><span class="lesson-step-dot-title">Resumen de la lección</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="9" disabled aria-label="Ir al paso 9: Evaluación de la Clase 7"><span class="lesson-step-dot-number">9</span><span class="lesson-step-dot-title">Evaluación de la Clase 7</span></button></li>
+ </ol>
+
+ <section class="lesson-step" aria-live="polite">
+      <article class="lesson-step-card" data-step="1">
+        <span class="lesson-step-badge lesson-step-badge-intro">📖 Introducción</span>
+        <span class="lesson-step-number">Paso 1 de 9</span>
+        <h2>Objetivo de la clase</h2>
+<p class="lesson-step-text">Al finalizar esta lección, el estudiante podrá expresar sus emociones en LSC, identificará emociones en los demás y responderá con empatía en una conversación.</p>
+
+      </article>
+      <article class="lesson-step-card" data-step="2" hidden>
+        <span class="lesson-step-badge lesson-step-badge-media">🎬 Seña / Demostración</span>
+        <span class="lesson-step-number">Paso 2 de 9</span>
+        <h2>Introducción</h2>
+<p class="lesson-step-text">Las emociones son la parte más humana de la comunicación.</p>
+<p class="lesson-step-text">Hasta aquí has aprendido vocabulario para hablar del mundo. Ahora aprenderás a hablar de lo que sientes.</p>
+<p class="lesson-step-text">En LSC las emociones no se expresan con la mano únicamente: el rostro, la velocidad del movimiento y la postura corporal hacen la mayor parte del trabajo.</p>
+<p class="lesson-step-text">Esto significa que aprender emociones es también aprender a usar el rostro con intención.</p>
+
+      </article>
+      <article class="lesson-step-card" data-step="3" hidden>
+        <span class="lesson-step-badge lesson-step-badge-practice">✍️ Práctica</span>
+        <span class="lesson-step-number">Paso 3 de 9</span>
+        <h2>Emociones básicas</h2>
+<p class="lesson-step-text">Feliz o contento: se expresa con una sonrisa franca y un movimiento ascendente en el pecho.</p>
+<p class="lesson-step-text">Triste: los hombros bajan, la expresión decae y el movimiento es lento.</p>
+<p class="lesson-step-text">Enojado: aumenta la tensión, el ceño se frunce y el movimiento es más firme.</p>
+<p class="lesson-step-text">Asustado: los ojos se abren, el cuerpo se retrae y las manos se acercan al pecho.</p>
+<ul class="lesson-content-list">
+ <li>Feliz — sonrisa y movimiento ascendente.</li>
+ <li>Triste — hombros y expresión hacia abajo.</li>
+ <li>Enojado — tensión y ceño fruncido.</li>
+ <li>Asustado — ojos abiertos y cuerpo retraído.</li>
+ <li>Cansado — movimiento lento y descenso corporal.</li>
+</ul>
+
+      </article>
+      <article class="lesson-step-card" data-step="4" hidden>
+        <span class="lesson-step-badge lesson-step-badge-intro">📖 Introducción</span>
+        <span class="lesson-step-number">Paso 4 de 9</span>
+        <h2>El rostro como gramática</h2>
+<p class="lesson-step-text">En LSC el rostro no decora el mensaje: lo completa.</p>
+<p class="lesson-step-text">Con el rostro se indica si una pregunta es de sí o no, si algo es exagerado, si hay sorpresa o si hay duda.</p>
+<p class="lesson-step-text">Una misma seña con rostro neutro y con rostro marcado puede significar cosas distintas: esta es una de las razones por las que la LSC es una lengua visual completa.</p>
+<ul class="lesson-content-list">
+ <li>Las cejas marcan las preguntas.</li>
+ <li>La boca indica intensidad.</li>
+ <li>Los ojos marcan sorpresa o duda.</li>
+ <li>La postura marca la actitud.</li>
+</ul>
+
+      </article>
+      <article class="lesson-step-card" data-step="5" hidden>
+        <span class="lesson-step-badge lesson-step-badge-media">🎬 Seña / Demostración</span>
+        <span class="lesson-step-number">Paso 5 de 9</span>
+        <h2>¿Cómo te sientes?</h2>
+<p class="lesson-step-text">Practica esta conversación completa:</p>
+<p class="lesson-step-text">— ¿Cómo estás hoy?\n— Estoy feliz, gracias. ¿Y tú?\n— Estoy un poco cansado.\n— ¿Por qué? ¿Todo bien?\n— Sí, trabajé mucho. Estoy tranquilo.</p>
+<p class="lesson-step-text">Presta atención a la pregunta “¿Y tú?”: en LSC se devuelve la pregunta con el rostro y un señalamiento breve.</p>
+<ul class="lesson-content-list">
+ <li>Pregunta y responde sobre emociones.</li>
+ <li>Devuelve la pregunta.</li>
+ <li>Acompaña con el rostro correcto.</li>
+</ul>
+
+      </article>
+      <article class="lesson-step-card" data-step="6" hidden>
+        <span class="lesson-step-badge lesson-step-badge-practice">✍️ Práctica</span>
+        <span class="lesson-step-number">Paso 6 de 9</span>
+        <h2>Responder con empatía</h2>
+<p class="lesson-step-text">Responder con empatía significa reconocer la emoción del otro y responder de forma adecuada.</p>
+<p class="lesson-step-text">Si la persona está triste, se responde con expresión de acompañamiento y movimiento lento, no con una sonrisa.</p>
+<p class="lesson-step-text">Si está feliz, se responde con una expresión alegre y un movimiento más vivo.</p>
+<p class="lesson-step-text">Frases útiles: “te entiendo”, “¿estás bien?”, “tranquilo”, “me alegra”.</p>
+<ul class="lesson-content-list">
+ <li>“Te entiendo”</li>
+ <li>“¿Estás bien?”</li>
+ <li>“Tranquilo”</li>
+ <li>“Me alegra”</li>
+</ul>
+
+      </article>
+      <article class="lesson-step-card" data-step="7" hidden>
+        <span class="lesson-step-badge lesson-step-badge-intro">📖 Introducción</span>
+        <span class="lesson-step-number">Paso 7 de 9</span>
+        <h2>Práctica guiada</h2>
+<p class="lesson-step-text">Practica frente a un espejo las cinco emociones de la clase: feliz, triste, enojado, asustado y cansado.</p>
+<p class="lesson-step-text">Observa tu rostro más que tus manos: ¿se entiende la emoción sin ver la seña?</p>
+<p class="lesson-step-text">Luego pide a alguien que adivine la emoción que estás expresando.</p>
+
+      </article>
+      <article class="lesson-step-card" data-step="8" hidden>
+        <span class="lesson-step-badge lesson-step-badge-media">🎬 Seña / Demostración</span>
+        <span class="lesson-step-number">Paso 8 de 9</span>
+        <h2>Resumen de la lección</h2>
+<p class="lesson-step-text">En esta clase aprendiste:</p>
+<p class="lesson-step-text">Expresar emociones es la parte más importante de una conversación real y de la conexión con la comunidad sorda.</p>
+<ul class="lesson-content-list">
+ <li>Las señas de las emociones básicas.</li>
+ <li>El papel del rostro en la gramática.</li>
+ <li>Cómo preguntar y responder por el estado de ánimo.</li>
+ <li>Cómo responder con empatía.</li>
+</ul>
+
+      </article>
+      <article class="lesson-step-card" data-step="9" hidden>
+        <span class="lesson-step-badge lesson-step-badge-practice">✍️ Práctica</span>
+        <span class="lesson-step-number">Paso 9 de 9</span>
+        <h2>Evaluación de la Clase 7</h2>
+<p class="lesson-step-text">Responde las 8 preguntas. Necesitas acertar al menos 6 para aprobar y desbloquear la siguiente clase.</p>
+<form id="lesson-quiz" class="lesson-quiz" data-lesson="7">
+ <p class="lesson-step-text lesson-quiz-hint">Responde todas las preguntas. Necesitas al menos el 75% para aprobar y desbloquear la siguiente clase.</p>
+ <fieldset class="lesson-question" data-question="0" data-answer="0">
+    <legend>1. ¿Qué parte del cuerpo completa el mensaje emocional en LSC?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-0" value="0" required>
+      <span>A. El rostro.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-0" value="1" required>
+      <span>B. Los pies.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-0" value="2" required>
+      <span>C. La espalda.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-0" value="3" required>
+      <span>D. Ninguna.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="1" data-answer="0">
+    <legend>2. ¿Cómo se expresa la emoción de tristeza?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-1" value="0" required>
+      <span>A. Con hombros bajos, expresión decaída y movimiento lento.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-1" value="1" required>
+      <span>B. Con sonrisa y movimiento rápido.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-1" value="2" required>
+      <span>C. Con ceño fruncido y puños.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-1" value="3" required>
+      <span>D. Con saltos.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="2" data-answer="0">
+    <legend>3. Las cejas en LSC sirven para:</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-2" value="0" required>
+      <span>A. Marcar preguntas.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-2" value="1" required>
+      <span>B. Indicar colores.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-2" value="2" required>
+      <span>C. Contar números.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-2" value="3" required>
+      <span>D. Nada.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="3" data-answer="0">
+    <legend>4. ¿Qué significa responder con empatía?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-3" value="0" required>
+      <span>A. Reconocer la emoción del otro y responder de forma adecuada.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-3" value="1" required>
+      <span>B. Ignorar al otro.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-3" value="2" required>
+      <span>C. Cambiar de tema.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-3" value="3" required>
+      <span>D. Reír siempre.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="4" data-answer="0">
+    <legend>5. Una misma seña con distinto rostro:</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-4" value="0" required>
+      <span>A. Puede significar cosas distintas.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-4" value="1" required>
+      <span>B. Siempre significa lo mismo.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-4" value="2" required>
+      <span>C. No se puede hacer.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-4" value="3" required>
+      <span>D. Es un error.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="5" data-answer="0">
+    <legend>6. Si la persona está triste, se responde:</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-5" value="0" required>
+      <span>A. Con expresión de acompañamiento y movimiento lento.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-5" value="1" required>
+      <span>B. Con risas.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-5" value="2" required>
+      <span>C. Con movimientos rápidos.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-5" value="3" required>
+      <span>D. Sin mirarla.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="6" data-answer="0">
+    <legend>7. ¿Qué frase es útil para apoyar a alguien?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-6" value="0" required>
+      <span>A. “Te entiendo”.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-6" value="1" required>
+      <span>B. “No me importa”.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-6" value="2" required>
+      <span>C. “Habla más fuerte”.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-6" value="3" required>
+      <span>D. “¿Dónde está el baño?”</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="7" data-answer="0">
+    <legend>8. ¿Por qué el rostro es fundamental?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-7" value="0" required>
+      <span>A. Porque hace parte de la gramática de la LSC.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-7" value="1" required>
+      <span>B. Porque reemplaza a las manos.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-7" value="2" required>
+      <span>C. Porque es más fácil.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-7" value="3" required>
+      <span>D. No es fundamental.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <button type="submit" class="btn-hero btn-hero-solid" id="lesson-quiz-submit">Calificar evaluación</button>
+ <p id="lesson-quiz-result" class="lesson-quiz-result" role="status" aria-live="polite"></p>
+ <button type="button" id="lesson-restart" class="btn-hero btn-hero-outline is-hidden">Reiniciar lección</button>
+</form>
+
+      </article>
+ </section>
+
+ <div class="lesson-controls">
+    <a class="btn-hero btn-hero-outline" href="clase-6.html" aria-label="Ir a la clase anterior">‹ Clase anterior</a>
+
+    <div class="lesson-controls-main" style="display:flex; flex-wrap:wrap; align-items:center; gap:12px;">
+      <button class="btn-hero btn-hero-outline" id="lesson-previous" type="button" data-previous-url="clase-6.html">Anterior</button>
+      <button class="btn-hero btn-hero-solid" id="lesson-next" type="button">Siguiente <span class="btn-arrow">›</span></button>
+      <a class="btn-hero btn-hero-solid" id="lesson-next-class" href="clase-8.html?desde=7" aria-label="Ir a la siguiente clase">Siguiente clase <span class="btn-arrow">›</span></a>
+    </div>
+ </div>
+</div>
+</main>
+
+</body>
+</html>

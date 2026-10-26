@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Clase 2 - PARSEÑAS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="base.css?v=alfa-mascota-position-4">
+ <link rel="stylesheet" href="clase-steps.css">
+ <script defer src="inicio.js?v=alfa-pet-upload-1"></script>
+ <script defer src="clase-steps.js?v=alfa-mascota-position-2"></script>
+</head>
+<body class="theme-dark">
+
+<header class="top-bar" aria-label="Navegación principal"><a href="index.html" class="brand-label">PARSEÑAS</a><nav class="menu-rectangulo" aria-label="Secciones"><a href="index.html#top">Inicio</a><a href="index.html#clases">Clases</a><a href="index.html#contacto">Contáctanos</a></nav><form class="search-form" action="index.html#clases" method="get" role="search"><input class="search-input" name="q" type="search" placeholder="Buscar palabra o una clase..." aria-label="Buscar"><button class="search-btn" type="submit" aria-label="Buscar">&#128269;</button></form><div class="auth-actions" id="auth-actions"><a href="register.html" class="auth-btn" id="btn-registrarme">Registrarme</a><a href="login.html" class="auth-btn" id="btn-login">Iniciar sesión</a><span class="user-greeting" id="user-greeting" hidden></span></div><div class="profile-menu-wrapper" hidden><button type="button" id="profile-btn" aria-label="Abrir preferencias" aria-expanded="false">⚙</button><div class="profile-menu" id="profile-menu" hidden><p class="profile-menu-title">Preferencias</p><label class="profile-option" for="theme-toggle"><span>Tema claro</span><input type="checkbox" id="theme-toggle"></label><label class="profile-option" for="font-size-select"><span>Tamaño de texto</span><select id="font-size-select"><option value="normal">Normal</option><option value="large">Grande</option><option value="xl">Muy grande</option></select></label><div class="profile-menu-actions"><button type="button" class="profile-action-btn" id="toggle-mascota-btn">Ocultar mascota</button><a href="perfil.html" class="profile-action-btn" id="link-perfil">Editar perfil</a><a href="cerrar_sesion.php" class="profile-action-btn" id="link-logout">Cerrar sesión</a></div></div></div></header>
+
+<main>
+<div class="lesson-shell" data-lesson="2" data-total="9" data-current="1" data-authenticated="0" data-evaluation-failed="0">
+
+ <header class="lesson-heading">
+    <span class="section-label">Clase 2</span>
+    <h1>Saludos y Cortesía</h1>
+    <p>Aprende a saludar, presentarte, agradecer y despedirte usando expresiones de cortesía en Lengua de Señas Colombiana.</p>
+ </header>
+
+ <div class="lesson-progress-wrap">
+    <div class="lesson-progress" role="progressbar" aria-label="Progreso de la clase" aria-valuemin="0" aria-valuemax="100" aria-valuenow="11">
+      <div class="lesson-progress-bar" id="lesson-progress-bar" style="width: 11%"></div>
+    </div>
+    <p class="lesson-progress-label">
+      Paso <span id="lesson-step-value">1</span> de 9 —
+      <span id="lesson-progress-value">11</span>% completado
+    </p>
+ </div>
+
+ <ol class="lesson-steps-nav" id="lesson-steps-nav" aria-label="Pasos de la clase">
+        <li><button type="button" class="lesson-step-dot is-active" data-goto="1" aria-label="Ir al paso 1: Objetivo de la clase"><span class="lesson-step-dot-number">1</span><span class="lesson-step-dot-title">Objetivo de la clase</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="2" disabled aria-label="Ir al paso 2: Introducción"><span class="lesson-step-dot-number">2</span><span class="lesson-step-dot-title">Introducción</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="3" disabled aria-label="Ir al paso 3: ¿Qué son los saludos en LSC?"><span class="lesson-step-dot-number">3</span><span class="lesson-step-dot-title">¿Qué son los saludos en LSC?</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="4" disabled aria-label="Ir al paso 4: Cómo se saluda"><span class="lesson-step-dot-number">4</span><span class="lesson-step-dot-title">Cómo se saluda</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="5" disabled aria-label="Ir al paso 5: Presentarte y agradecer"><span class="lesson-step-dot-number">5</span><span class="lesson-step-dot-title">Presentarte y agradecer</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="6" disabled aria-label="Ir al paso 6: Práctica guiada"><span class="lesson-step-dot-number">6</span><span class="lesson-step-dot-title">Práctica guiada</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="7" disabled aria-label="Ir al paso 7: Errores comunes"><span class="lesson-step-dot-number">7</span><span class="lesson-step-dot-title">Errores comunes</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="8" disabled aria-label="Ir al paso 8: Resumen de la lección"><span class="lesson-step-dot-number">8</span><span class="lesson-step-dot-title">Resumen de la lección</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="9" disabled aria-label="Ir al paso 9: Evaluación de la Clase 2"><span class="lesson-step-dot-number">9</span><span class="lesson-step-dot-title">Evaluación de la Clase 2</span></button></li>
+ </ol>
+
+ <section class="lesson-step" aria-live="polite">
+      <article class="lesson-step-card" data-step="1">
+        <span class="lesson-step-badge lesson-step-badge-intro">📖 Introducción</span>
+        <span class="lesson-step-number">Paso 1 de 9</span>
+        <h2>Objetivo de la clase</h2>
+<p class="lesson-step-text">Al finalizar esta lección, el estudiante podrá saludar, presentarse, agradecer y despedirse en Lengua de Señas Colombiana, reconociendo la importancia de la cortesía y del contacto visual dentro de la comunidad sorda.</p>
+
+      </article>
+      <article class="lesson-step-card" data-step="2" hidden>
+        <span class="lesson-step-badge lesson-step-badge-media">🎬 Seña / Demostración</span>
+        <span class="lesson-step-number">Paso 2 de 9</span>
+        <h2>Introducción</h2>
+<p class="lesson-step-text">Los saludos abren la puerta de cualquier conversación en LSC.</p>
+<p class="lesson-step-text">En la clase anterior aprendiste el alfabeto manual y a deletrear palabras. Ahora darás el paso más natural: iniciar una conversación.</p>
+<p class="lesson-step-text">Los saludos son las primeras señas que una persona sorda suele enseñar a quien se acerca a su cultura. Son breves, claras y siempre acompañadas de una expresión facial amable.</p>
+<p class="lesson-step-text">Recuerda que en LSC el rostro hace el trabajo que en el español hace la voz: con él muestras si estás alegre, si preguntas o si agradeces de verdad.</p>
+
+      </article>
+      <article class="lesson-step-card" data-step="3" hidden>
+        <span class="lesson-step-badge lesson-step-badge-practice">✍️ Práctica</span>
+        <span class="lesson-step-number">Paso 3 de 9</span>
+        <h2>¿Qué son los saludos en LSC?</h2>
+<p class="lesson-step-text">Un saludo en LSC es una seña breve que se realiza al iniciar o cerrar un encuentro.</p>
+<p class="lesson-step-text">Para que un saludo sea comprendido se necesita algo más que la mano: se necesita contacto visual, postura abierta y una expresión facial acorde.</p>
+<p class="lesson-step-text">Saludar correctamente también implica esperar el turno: no se interrumpe a quien está señalando.</p>
+<ul class="lesson-content-list">
+ <li>Mirada directa a los ojos.</li>
+ <li>Expresión facial amable.</li>
+ <li>Mano visible y a la altura del pecho.</li>
+ <li>Movimiento claro y sin prisa.</li>
+ <li>Esperar el turno para responder.</li>
+</ul>
+
+      </article>
+      <article class="lesson-step-card" data-step="4" hidden>
+        <span class="lesson-step-badge lesson-step-badge-intro">📖 Introducción</span>
+        <span class="lesson-step-number">Paso 4 de 9</span>
+        <h2>Cómo se saluda</h2>
+<p class="lesson-step-text">Señas básicas de saludo.</p>
+<p class="lesson-step-text">Hola: se realiza con la mano abierta y un movimiento corto de saludo cerca de la sien o del hombro, acompañado de una sonrisa.</p>
+<p class="lesson-step-text">Buenos días: se combina la seña de “bueno” (pulgar hacia arriba) con la seña de “día”, que asciende como el sol naciente.</p>
+<p class="lesson-step-text">Buenas tardes y buenas noches: usan el mismo patrón, cambiando la seña de día por la de tarde (movimiento hacia el frente y hacia abajo) o la de noche (mano que desciende y se cierra).</p>
+<ul class="lesson-content-list">
+ <li>Hola — saludo breve con la mano abierta.</li>
+ <li>Buenos días — “bueno” + “día”.</li>
+ <li>Buenas tardes — “bueno” + “tarde”.</li>
+ <li>Buenas noches — “bueno” + “noche”.</li>
+</ul>
+
+      </article>
+      <article class="lesson-step-card" data-step="5" hidden>
+        <span class="lesson-step-badge lesson-step-badge-media">🎬 Seña / Demostración</span>
+        <span class="lesson-step-number">Paso 5 de 9</span>
+        <h2>Presentarte y agradecer</h2>
+<p class="lesson-step-text">Mi nombre es...: se señala a uno mismo y luego se deletrea el nombre con el alfabeto manual que ya conoces.</p>
+<p class="lesson-step-text">Mucho gusto: se juntan las manos y se realiza un movimiento breve de acercamiento, con expresión de agrado.</p>
+<p class="lesson-step-text">Gracias: se lleva la mano desde la boca o el mentón hacia el frente y hacia abajo, como si se entregara algo al otro.</p>
+<p class="lesson-step-text">Por favor: se frota la palma de la mano sobre el pecho con un movimiento circular suave y una expresión de solicitud.</p>
+<ul class="lesson-content-list">
+ <li>Mi nombre es… — señalarse + deletreo del nombre.</li>
+ <li>Mucho gusto — manos que se acercan.</li>
+ <li>Gracias — mano del mentón hacia el frente.</li>
+ <li>Por favor — palma en movimiento circular sobre el pecho.</li>
+</ul>
+
+      </article>
+      <article class="lesson-step-card" data-step="6" hidden>
+        <span class="lesson-step-badge lesson-step-badge-practice">✍️ Práctica</span>
+        <span class="lesson-step-number">Paso 6 de 9</span>
+        <h2>Práctica guiada</h2>
+<p class="lesson-step-text">Practica frente a un espejo el siguiente diálogo completo, primero sin voz y luego con una persona:</p>
+<p class="lesson-step-text">— Hola. Buenos días.\n— Hola. Buenos días. ¿Cómo estás?\n— Bien, gracias. Mi nombre es…\n— Mucho gusto. Mi nombre es…\n— Gracias. Hasta luego.</p>
+<p class="lesson-step-text">Repite el diálogo tres veces cambiando los nombres. Mantén las manos dentro del campo visual de la otra persona y conserva el contacto visual mientras “escuchas”.</p>
+<ul class="lesson-content-list">
+ <li>Saluda siempre al iniciar y al terminar.</li>
+ <li>Presenta tu nombre deletreándolo con calma.</li>
+ <li>Agradece antes de despedirte.</li>
+</ul>
+
+      </article>
+      <article class="lesson-step-card" data-step="7" hidden>
+        <span class="lesson-step-badge lesson-step-badge-intro">📖 Introducción</span>
+        <span class="lesson-step-number">Paso 7 de 9</span>
+        <h2>Errores comunes</h2>
+<p class="lesson-step-text">Mirar hacia otro lado mientras el otro señala se interpreta como desinterés.</p>
+<p class="lesson-step-text">Realizar la seña sin expresión facial deja el mensaje “vacío”.</p>
+<p class="lesson-step-text">Tapar la boca o el rostro con la mano dificulta la lectura del mensaje.</p>
+<p class="lesson-step-text">Tapar el rostro tampoco es correcto: el rostro hace parte de la gramática.</p>
+
+      </article>
+      <article class="lesson-step-card" data-step="8" hidden>
+        <span class="lesson-step-badge lesson-step-badge-media">🎬 Seña / Demostración</span>
+        <span class="lesson-step-number">Paso 8 de 9</span>
+        <h2>Resumen de la lección</h2>
+<p class="lesson-step-text">En esta clase aprendiste:</p>
+<p class="lesson-step-text">Los saludos y la cortesía son la primera muestra de respeto hacia la comunidad sorda. Dominarlos te permitirá iniciar conversaciones con confianza.</p>
+<ul class="lesson-content-list">
+ <li>Cómo saludar en distintas horas del día.</li>
+ <li>Cómo presentarte y deletrear tu nombre.</li>
+ <li>Cómo agradecer y pedir el favor.</li>
+ <li>Cómo despedirte.</li>
+ <li>La importancia del contacto visual y la expresión facial.</li>
+</ul>
+
+      </article>
+      <article class="lesson-step-card" data-step="9" hidden>
+        <span class="lesson-step-badge lesson-step-badge-practice">✍️ Práctica</span>
+        <span class="lesson-step-number">Paso 9 de 9</span>
+        <h2>Evaluación de la Clase 2</h2>
+<p class="lesson-step-text">Responde las 8 preguntas. Necesitas acertar al menos 6 para aprobar y desbloquear la siguiente clase.</p>
+<form id="lesson-quiz" class="lesson-quiz" data-lesson="2">
+ <p class="lesson-step-text lesson-quiz-hint">Responde todas las preguntas. Necesitas al menos el 75% para aprobar y desbloquear la siguiente clase.</p>
+ <fieldset class="lesson-question" data-question="0" data-answer="0">
+    <legend>1. ¿Qué elemento acompaña obligatoriamente un saludo en LSC?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-0" value="0" required>
+      <span>A. El contacto visual y la expresión facial.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-0" value="1" required>
+      <span>B. Un grito de saludo.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-0" value="2" required>
+      <span>C. Un aplauso.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-0" value="3" required>
+      <span>D. El alfabeto completo.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="1" data-answer="0">
+    <legend>2. ¿Cómo se construye la seña de “buenos días”?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-1" value="0" required>
+      <span>A. “Bueno” + “día”.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-1" value="1" required>
+      <span>B. Solo deletreando.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-1" value="2" required>
+      <span>C. Con las dos manos en el pecho.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-1" value="3" required>
+      <span>D. Con un aplauso.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="2" data-answer="0">
+    <legend>3. ¿Qué se debe hacer al presentarse?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-2" value="0" required>
+      <span>A. Señalarse y deletrear el nombre.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-2" value="1" required>
+      <span>B. Dar la mano.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-2" value="2" required>
+      <span>C. Escribir en un papel.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-2" value="3" required>
+      <span>D. Hablar más fuerte.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="3" data-answer="0">
+    <legend>4. La seña de “gracias” se realiza:</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-3" value="0" required>
+      <span>A. Desde el mentón hacia el frente y abajo.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-3" value="1" required>
+      <span>B. Con los pies.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-3" value="2" required>
+      <span>C. A espaldas del otro.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-3" value="3" required>
+      <span>D. Con la mano cerrada sobre el hombro.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="4" data-answer="0">
+    <legend>5. ¿Qué significa tapar el rostro con la mano al señalar?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-4" value="0" required>
+      <span>A. Dificulta la comprensión del mensaje.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-4" value="1" required>
+      <span>B. Es obligatorio.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-4" value="2" required>
+      <span>C. Mejora la visibilidad.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-4" value="3" required>
+      <span>D. Es una señal de cortesía.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="5" data-answer="0">
+    <legend>6. ¿Cuándo se usa un saludo?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-5" value="0" required>
+      <span>A. Al iniciar y al terminar un encuentro.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-5" value="1" required>
+      <span>B. Solo al despedirse.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-5" value="2" required>
+      <span>C. Nunca.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-5" value="3" required>
+      <span>D. Solo por escrito.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="6" data-answer="0">
+    <legend>7. ¿Es correcto interrumpir a quien está señalando?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-6" value="0" required>
+      <span>A. No, se debe esperar el turno.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-6" value="1" required>
+      <span>B. Sí, siempre.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-6" value="2" required>
+      <span>C. Sí, si hablo fuerte.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-6" value="3" required>
+      <span>D. Sí, con un aplauso.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="7" data-answer="0">
+    <legend>8. ¿Por qué la cortesía es importante en LSC?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-7" value="0" required>
+      <span>A. Muestra respeto hacia la otra persona y su cultura.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-7" value="1" required>
+      <span>B. Porque reemplaza el alfabeto.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-7" value="2" required>
+      <span>C. Porque evita deletrear.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-7" value="3" required>
+      <span>D. No es importante.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <button type="submit" class="btn-hero btn-hero-solid" id="lesson-quiz-submit">Calificar evaluación</button>
+ <p id="lesson-quiz-result" class="lesson-quiz-result" role="status" aria-live="polite"></p>
+ <button type="button" id="lesson-restart" class="btn-hero btn-hero-outline is-hidden">Reiniciar lección</button>
+</form>
+
+      </article>
+ </section>
+
+ <div class="lesson-controls">
+    <a class="btn-hero btn-hero-outline" href="clase-1.html" aria-label="Ir a la clase anterior">‹ Clase anterior</a>
+
+    <div class="lesson-controls-main" style="display:flex; flex-wrap:wrap; align-items:center; gap:12px;">
+      <button class="btn-hero btn-hero-outline" id="lesson-previous" type="button" data-previous-url="clase-1.html">Anterior</button>
+      <button class="btn-hero btn-hero-solid" id="lesson-next" type="button">Siguiente <span class="btn-arrow">›</span></button>
+      <a class="btn-hero btn-hero-solid" id="lesson-next-class" href="clase-3.html?desde=2" aria-label="Ir a la siguiente clase">Siguiente clase <span class="btn-arrow">›</span></a>
+    </div>
+ </div>
+</div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PARSEÑAS — Lengua de Señas Colombiana</title>
+  <meta name="mascota-url" content="mascota.php">
+  <meta name="class-search-url" content="buscar_clases.php">
+  <meta name="mascota-avatar" content="">
+  <script>window.__parseñasHasMascota = false;</script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤟</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="base.css?v=alfa-mascota-position-4">
+  <script defer src="inicio.js?v=alfa-pet-upload-1"></script>
+</head>
+
+<body id="top">
+<header class="top-bar" aria-label="Navegación principal">
+  <a href="index.html" class="brand-label">PARSEÑAS</a>
+    <nav class="menu-rectangulo" aria-label="Secciones">
+    <a href="#top">Inicio</a>
+    <a href="#clases">Clases</a>
+    <a href="#contacto">Contáctanos</a>
+  </nav>
+  <form class="search-form" action="index.html#clases" method="get" role="search">
+    <input class="search-input" name="q" type="search" placeholder="Buscar palabra o una clase..." aria-label="Buscar">
+    <button class="search-btn" type="submit" aria-label="Buscar">&#128269;</button>
+  </form>
+  <div class="auth-actions" id="auth-actions">
+       <a href="register.html" class="auth-btn" id="btn-registrarme">Registrarme</a>
+       <a href="login.html" class="auth-btn" id="btn-login">Iniciar sesión</a>
+       <span class="user-greeting" id="user-greeting" hidden></span>
+  </div>
+  <div class="profile-menu-wrapper" hidden>
+    <button type="button" id="profile-btn" aria-label="Abrir preferencias" aria-expanded="false">⚙</button>
+    <div class="profile-menu" id="profile-menu" hidden>
+      <p class="profile-menu-title">Preferencias</p>
+      <label class="profile-option" for="theme-toggle">
+        <span>Tema claro</span>
+        <input type="checkbox" id="theme-toggle">
+      </label>
+      <label class="profile-option" for="font-size-select">
+        <span>Tamaño de texto</span>
+        <select id="font-size-select">
+          <option value="normal">Normal</option>
+          <option value="large">Grande</option>
+          <option value="xl">Muy grande</option>
+        </select>
+      </label>
+        <div class="profile-menu-actions">
+        <button type="button" class="profile-action-btn" id="toggle-mascota-btn">Ocultar mascota</button>
+
+        <div id="acciones-sesion" hidden>
+          <a href="perfil.html" class="profile-action-btn" id="link-perfil" hidden>Editar perfil</a>
+          <a href="cerrar_sesion.php" class="profile-action-btn" id="link-logout" hidden>Cerrar sesión</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Panel de administración (solo para admins) -->
+<div id="admin-panel" hidden>
+ <button type="button" class="admin-toggle" id="admin-toggle" aria-label="Abrir panel de administración" aria-controls="admin-drawer" aria-expanded="false">‹<small>Admin</small></button>
+ <aside class="admin-drawer" id="admin-drawer" aria-label="Panel de administración" aria-hidden="true">
+    <button type="button" class="admin-close" id="admin-close" aria-label="Cerrar panel">×</button>
+    <span class="admin-kicker">Administración</span><h2>Usuarios</h2>
+    <p>Gestiona cuentas, datos y permisos.</p>
+    <a href="admin_usuarios.php" class="admin-open-link">Abrir gestión completa →</a>
+ </aside>
+ <div class="admin-scrim" id="admin-scrim"></div>
+</div>
+
+
+
+<!-- ===== HERO ===== -->
+<section class="hero" aria-label="Bienvenida">
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+    <span class="hero-ghost">SEÑAS</span>
+    <span class="hero-title">PARSE<span>Ñ</span>AS</span>
+    <p class="hero-tags">Lengua de Señas &nbsp;·&nbsp; Colombia &nbsp;·&nbsp; LSC</p>
+    <p class="hero-tagline">Comunicación sin barreras</p>
+    <div class="hero-actions">
+      <!-- Botón único "Continuar": lleva al usuario a su última clase y paso visto.
+           Si nunca entró a una clase, el backend lo manda a la clase 0. -->
+      <a href="continuar.php" class="btn-hero btn-hero-solid btn-shine">
+        Continuar <span class="btn-arrow">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">scroll</div>
+</section>
+
+<!-- ===== SECCIÓN — QUÉ PUEDES HACER ===== -->
+<section class="section section-dark" aria-labelledby="sec-clases-title">
+  <span class="section-label">Aprende a tu ritmo</span>
+
+  <!-- Texto dinámico según estado de sesión (lo ajusta inicio.js) -->
+ <h2 class="section-title" id="sec-clases-title">¡Aprende a tu ritmo!</h2>
+ <p class="section-sub" id="sec-clases-sub">Conoce nuestra metodología de aprendizaje interactiva, paso a paso y a tu medida.</p>
+
+
+  <div class="section-divider"></div>
+
+  <!-- Carrusel -->
+  <div style="margin-top: 56px;">
+    <section  id="clases" class="class-carousel" aria-label="Clases disponibles">
+      <button type="button" class="carousel-arrow" id="carousel-prev" aria-label="Clase anterior">&#8249;</button>
+
+      <div class="carousel-track" aria-live="polite">
+
+        <a href="clase-0.html" class="class-card">
+          <h2>Clase 0</h2>
+          <p>Introducción a la Lengua de Señas Colombiana. El punto de partida de tu aprendizaje.</p>
+        </a>
+
+        <a href="clase-1.html" class="class-card">
+          <h2>Clase 1</h2>
+          <p>Alfabeto y deletreo. Aprende a deletrear palabras letra por letra en LSC.</p>
+        </a>
+
+        <a href="clase-2.html" class="class-card">
+          <h2>Clase 2</h2>
+          <p>Saludos y cortesía. Cómo saludar, despedirte y ser amable en señas.</p>
+        </a>
+
+        <a href="clase-3.html" class="class-card">
+          <h2>Clase 3</h2>
+          <p>Familia. Las señas para nombrar a los integrantes de una familia.</p>
+        </a>
+
+        <a href="clase-4.html" class="class-card">
+          <h2>Clase 4</h2>
+          <p>Números, fechas y tiempo. Aprende a dar la fecha y los números básicos.</p>
+        </a>
+
+        <a href="clase-5.html" class="class-card">
+          <h2>Clase 5</h2>
+          <p>Lugares cotidianos. Los sitios del día a día en lenguaje de señas.</p>
+        </a>
+
+        <a href="clase-6.html" class="class-card">
+          <h2>Clase 6</h2>
+          <p>Colores y alimentos. Señas para los colores primarios y comidas comunes.</p>
+        </a>
+
+        <a href="clase-7.html" class="class-card">
+          <h2>Clase 7</h2>
+          <p>Emociones. Expresa cómo te sientes usando lenguaje de señas.</p>
+        </a>
+
+        <a href="clase-8.html" class="class-card">
+          <h2>Clase 8</h2>
+          <p>Conversación cotidiana. Practica respondiendo una conversación básica.</p>
+        </a>
+
+      </div>
+
+      <button type="button" class="carousel-arrow" id="carousel-next" aria-label="Clase siguiente">&#8250;</button>
+    </section>
+  </div>
+</section>
+
+<!-- ===== SECCIÓN — DATOS RELEVANTES ===== -->
+<section class="section section-black" aria-labelledby="sec-datos-title">
+  <span class="section-label">Datos relevantes</span>
+  <h2 class="section-title" id="sec-datos-title">¿Por qué aprender señas?</h2>
+  <div class="section-divider" style="margin-bottom: 56px;"></div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <span class="info-card-icon">👂</span>
+      <p class="info-card-label">Personas sordas en Colombia</p>
+      <p class="info-card-value">+455,000 personas usan LSC como lengua materna</p>
+    </div>
+    <div class="info-card">
+      <span class="info-card-icon">📚</span>
+      <p class="info-card-label">Clases disponibles</p>
+      <p class="info-card-value">9 clases gratuitas, desde básico hasta conversación</p>
+    </div>
+    <div class="info-card">
+      <span class="info-card-icon">🤝</span>
+      <p class="info-card-label">Inclusión</p>
+      <p class="info-card-value">Comunicarte en señas abre puertas y rompe barreras</p>
+    </div>
+    <div class="info-card">
+      <span class="info-card-icon">⚡</span>
+      <p class="info-card-label">Sin requisitos</p>
+      <p class="info-card-value">No necesitas experiencia previa para empezar</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECCIÓN — MISIÓN Y VISIÓN ===== -->
+<section class="section section-dark" aria-labelledby="sec-mision-title">
+  <span class="section-label">Quiénes somos</span>
+  <h2 class="section-title" id="sec-mision-title">Misión y Visión</h2>
+  <div class="section-divider" style="margin-bottom: 56px;"></div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <span class="info-card-icon">🎯</span>
+      <p class="info-card-label">Nuestra Misión</p>
+      <p class="info-card-value">Enseñar la Lengua de Señas Colombiana de forma gratuita, accesible y paso a paso, para que cualquier persona pueda comunicarse sin barreras con la comunidad sorda.</p>
+    </div>
+    <div class="info-card">
+      <span class="info-card-icon">🌟</span>
+      <p class="info-card-label">Nuestra Visión</p>
+      <p class="info-card-value">Ser la plataforma colombiana de referencia para aprender LSC, cerrando la brecha de comunicación entre personas oyentes y sordas en todo el país. En aproximadamente 5 años, queremos ser la primera opción para aprender LSC en Colombia.</p>
+    </div>
+    <div class="info-card">
+      <span class="info-card-icon">🤟</span>
+      <p class="info-card-label">Nuestros Valores</p>
+      <p class="info-card-value">Inclusión, gratuidad, respeto por la cultura Sorda y aprendizaje a tu propio ritmo, con una mascota que te acompaña en cada paso.</p>
+    </div>
+    <div class="info-card">
+      <span class="info-card-icon">🇨🇴</span>
+      <p class="info-card-label">Hecho en Colombia</p>
+      <p class="info-card-value">Contenido pensado para Colombia: señas, ejemplos y contexto cultural de la LSC oficial, reconocida por la Ley 324 de 1996.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECCIÓN — MASCOTA ===== -->
+<section class="section section-dark" aria-labelledby="sec-mascota-title">
+  <span class="section-label">Tu compañero de aprendizaje</span>
+  <h2 class="section-title" id="sec-mascota-title">Añade tu mascota mágica</h2>
+  <p class="section-sub" id="mascota-texto">Elige una imagen de tu equipo. Te acompañará durante todo el recorrido.</p>
+  <div class="section-divider" style="margin-bottom: 40px;"></div>
+
+  <div style="text-align:center;">
+     <form class="mascota-upload-form" aria-label="Guardar mascota" id="mascota-uploader" method="post" enctype="multipart/form-data">
+       <label for="mascota-input">Imagen de tu equipo (JPEG, PNG, GIF o WebP; máximo 4 MB)</label>
+       <input type="file" id="mascota-input" name="mascota" accept="image/jpeg,image/png,image/gif,image/webp" required>
+       <button class="btn-hero btn-hero-outline" type="submit">Guardar mi mascota</button>
+       <span class="custom-file-filename" id="mascota-filename" aria-live="polite"></span>
+     </form>
+     <a href="perfil.html" class="btn-hero btn-hero-outline" id="mascota-cambiar" hidden>Cambiar mi mascota desde mi perfil</a>
+     <form id="mascota-name-form" class="mascota-name-form" hidden>
+       <label for="mascota-name-input">Nombre de tu mascota</label>
+       <input id="mascota-name-input" type="text" maxlength="50" placeholder="Ej. Luna">
+       <button class="btn-hero btn-hero-outline" type="submit">Guardar nombre</button>
+       <span id="mascota-name-status" role="status" aria-live="polite"></span>
+     </form>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<div class="cta-band" aria-label="Llamado a la acción">
+  <div class="cta-band-text">
+    <p class="cta-band-eyebrow">Empieza hoy</p>
+    <h2 class="cta-band-title">¿Listo para comunicarte<br>sin barreras?</h2>
+    <p class="cta-band-sub">Únete y aprende la Lengua de Señas Colombiana de forma gratuita, a tu propio ritmo.</p>
+  </div>
+  <div class="cta-band-action">
+    <a href="clase-0.html" class="btn-hero btn-hero-solid btn-shine">
+      Comenzar ahora &nbsp;<span class="btn-arrow">›</span>
+    </a>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" aria-label="Pie de página">
+  <div class="footer-grid">
+
+    <div class="footer-brand">
+      <h3>PARSEÑAS</h3>
+      <p>Aprende la Lengua de Señas Colombiana de forma gratuita. Comunicación sin barreras, al alcance de todos.</p>
+      <div class="footer-social" style="margin-top:20px; display:flex; flex-wrap:wrap; gap:10px;">
+        <a href="https://www.instagram.com/parsenas_oficial" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Instagram de PARSEÑAS">📷 Instagram</a>
+        <a href="https://www.youtube.com/results?search_query=parsenas+lsc" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="YouTube de PARSEÑAS">▶️ YouTube</a>
+        <a href="https://www.tiktok.com/@parsenas_oficial" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="TikTok de PARSEÑAS">🎵 TikTok</a>
+        <a href="https://wa.me/573043161570" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="WhatsApp de PARSEÑAS">💬 WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Clases</h4>
+      <a href="clase-0.html">Clase 0 — Introducción</a>
+      <a href="clase-1.html">Clase 1 — Alfabeto</a>
+      <a href="clase-2.html">Clase 2 — Saludos</a>
+      <a href="clase-3.html">Clase 3 — Familia</a>
+      <a href="clase-4.html">Clase 4 — Números</a>
+      <a href="clase-5.html">Clase 5 — Lugares</a>
+      <a href="clase-6.html">Clase 6 — Colores</a>
+      <a href="clase-7.html">Clase 7 — Emociones</a>
+      <a href="clase-8.html">Clase 8 — Conversación</a>
+    </div>
+
+    <div id="contacto" class="footer-col">
+      <h4>Contacto</h4>
+      <a href="https://wa.me/573043161570" target="_blank" rel="noopener noreferrer">WhatsApp: +57 304 316 1570</a>
+      <a href="https://www.instagram.com/parsenas_oficial" target="_blank" rel="noopener noreferrer">Instagram: @parsenas_oficial</a>
+      <a href="datos.php">Formulario de contacto</a>
+      <div id="acceso-invitado">
+        <br>
+        <h4 style="margin-top:24px;">Acceso</h4>
+        <a href="login.html">Iniciar sesión</a>
+        <a href="register.html">Registrarme</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 PARSEÑAS — Todos los derechos reservados</span>
+    <span>Hecho con 🤟 para Colombia</span>
+  </div>
+</footer>
+
+<!-- ===== PANEL LATERAL DE BÚSQUEDA ===== -->
+<aside class="search-panel" id="search-panel" aria-label="Resultados de búsqueda" hidden>
+  <button type="button" class="search-panel-close" id="search-panel-close" aria-label="Cerrar resultados">×</button>
+  <h3 class="search-panel-title">🔍 Resultados</h3>
+  <p class="search-panel-hint" id="search-panel-hint"></p>
+  <div class="search-panel-results" id="search-panel-results"></div>
+</aside>
+<div class="search-scrim" id="search-scrim" hidden></div>
+
+<script>
+  // Valores por defecto (invitado). inicio.js los actualiza consultando
+  // estado_sesion.php: clase máxima accesible y si hay sesión iniciada.
+  window.__parseñasMaxClass = 0;
+  window.__parseñasGuest = true;
+</script>
+
+<!-- ===== MASCOTA FLOTANTE ===== -->
+<aside class="mascota" id="mascota-container" data-mascota-available="0" aria-label="Mascota" hidden>
+ <button type="button" class="mascota-trigger" id="mascota-trigger" aria-label="Escuchar mensaje de la mascota">
+   <img id="mascota-img" alt="Tu mascota" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+        style="display:none;"
+        onerror="this.style.display='none'">
+ </button>
+ <span class="mascota-nombre" id="mascota-nombre" hidden></span>
+ <div id="mascota-dialogo" class="mascota-dialogo" role="status" aria-live="polite"></div>
+</aside>
+
+<!-- Canvas efecto humo morado -->
+<canvas id="fluid-canvas" aria-hidden="true"></canvas>
+
+</body>
+</html>

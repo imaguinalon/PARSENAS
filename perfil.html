@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi perfil - PARSEÑAS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="base.css?v=alfa-mascota-position-4">
+    <script defer src="inicio.js?v=alfa-pet-upload-1"></script>
+    <script defer src="perfil.js?v=alfa-pet-upload-1"></script>
+    <script defer src="password-requirements.js?v=parseñas-rules-1"></script>
+</head>
+<body>
+<header class="top-bar"></header>
+<main class="profile-page">
+    <a class="btn-hero btn-hero-outline profile-back" href="index.html">← Volver al inicio</a>
+    <span class="section-label">Tu cuenta</span>
+    <h1 class="section-title">Mi perfil</h1>
+    <p class="profile-status" id="perfil-status" role="status" hidden></p>
+    <p class="profile-error" id="perfil-error" role="alert" hidden></p>
+
+    <section class="profile-panel">
+        <h2>Actualizar información</h2>
+        <form class="profile-edit-form" data-profile-action>
+            <input type="hidden" name="action" value="profile_update">
+            <input type="hidden" name="csrf_token" data-csrf-token>
+            <label for="perfil-name-input">Nombre</label>
+            <input id="perfil-name-input" name="name" class="input-gold" maxlength="255" required>
+            <label for="perfil-apellido-input">Apellido</label>
+            <input id="perfil-apellido-input" name="apellido" class="input-gold" maxlength="255">
+            <label for="perfil-email-input">Correo electrónico</label>
+            <input id="perfil-email-input" type="email" name="email" class="input-gold" maxlength="255" required>
+            <label for="profile-telefono-prefijo">Teléfono</label>
+            <div class="phone-wrapper">
+                <select id="profile-telefono-prefijo" name="telefono_prefijo" class="phone-prefix" aria-label="Prefijo internacional">
+                    <option value="">Prefijo</option>
+                    <option value="+1">+1 — Canadá / Estados Unidos</option>
+                    <option value="+34">+34 — España</option>
+                    <option value="+51">+51 — Perú</option>
+                    <option value="+52">+52 — México</option>
+                    <option value="+54">+54 — Argentina</option>
+                    <option value="+55">+55 — Brasil</option>
+                    <option value="+56">+56 — Chile</option>
+                    <option value="+57">+57 — Colombia</option>
+                    <option value="+58">+58 — Venezuela</option>
+                    <option value="+591">+591 — Bolivia</option>
+                    <option value="+593">+593 — Ecuador</option>
+                    <option value="+595">+595 — Paraguay</option>
+                    <option value="+598">+598 — Uruguay</option>
+                </select>
+                <input id="profile-telefono" name="telefono" class="phone-number" type="tel" maxlength="30" placeholder="Ej. 300 123 4567">
+            </div>
+            <button class="btn-gold w-full mt-4" type="submit">Guardar cambios</button>
+        </form>
+    </section>
+
+    <section class="profile-panel">
+        <h2>Mascota</h2>
+        <div id="perfil-mascota" class="profile-pet" hidden>
+            <img id="perfil-mascota-img" alt="Tu mascota">
+            <p>Tienes una mascota guardada.</p>
+        </div>
+        <p id="perfil-sin-mascota">Aún no has guardado una mascota.</p>
+        <form class="profile-edit-form" data-profile-action>
+            <input type="hidden" name="action" value="pet_name">
+            <input type="hidden" name="csrf_token" data-csrf-token>
+            <label for="profile-mascota-name">Nombre de tu mascota</label>
+            <input id="profile-mascota-name" name="mascota_nombre" class="input-gold" maxlength="50" placeholder="Ej. Luna">
+            <button class="btn-gold w-full mt-4" type="submit">Guardar nombre</button>
+        </form>
+        <form class="profile-edit-form profile-pet-upload" data-profile-action method="post" enctype="multipart/form-data">
+            <input type="hidden" name="action" value="pet_upload">
+            <input type="hidden" name="csrf_token" data-csrf-token>
+            <label for="mascota-upload">Elige una imagen de tu equipo</label>
+            <input id="mascota-upload" type="file" name="mascota" accept="image/jpeg,image/png,image/gif,image/webp" required class="input-gold">
+            <small class="profile-pet-note">Se guarda una sola copia en el servidor (JPEG, PNG, GIF o WebP; máximo 4 MB). Al reemplazarla se elimina la anterior.</small>
+            <button class="btn-gold w-full mt-4" type="submit">Guardar mascota</button>
+        </form>
+        <form class="profile-edit-form" data-profile-action>
+            <input type="hidden" name="action" value="pet_remove">
+            <input type="hidden" name="csrf_token" data-csrf-token>
+            <button class="profile-action-btn w-full" type="submit">Eliminar mascota guardada</button>
+        </form>
+    </section>
+
+    <section class="profile-panel">
+        <h2>Cambiar contraseña</h2>
+        <form class="profile-edit-form" data-profile-action>
+            <input type="hidden" name="action" value="password_update">
+            <input type="hidden" name="csrf_token" data-csrf-token>
+            <label for="profile-current-password">Contraseña actual</label>
+            <div class="profile-password-field">
+                <input id="profile-current-password" type="password" name="current_password" class="input-gold" autocomplete="current-password" required>
+                <button type="button" class="password-toggle-btn" data-target="profile-current-password" aria-label="Mostrar contraseña">Ver</button>
+            </div>
+            <label for="profile-new-password">Nueva contraseña</label>
+            <div class="profile-password-field">
+                <input id="profile-new-password" type="password" name="password" class="input-gold" autocomplete="new-password" minlength="8" required>
+                <button type="button" class="password-toggle-btn" data-target="profile-new-password" aria-label="Mostrar contraseña">Ver</button>
+            </div>
+            <ul class="password-requirements" data-password-requirements data-input="profile-new-password" hidden>
+                <li data-rule="length">Al menos 8 caracteres</li>
+                <li data-rule="uppercase">Una letra mayúscula</li>
+                <li data-rule="number">Un número</li>
+                <li data-rule="special">Un carácter especial</li>
+            </ul>
+            <label for="profile-password-confirmation">Confirmar nueva contraseña</label>
+            <div class="profile-password-field">
+                <input id="profile-password-confirmation" type="password" name="password_confirmation" class="input-gold" autocomplete="new-password" minlength="8" required>
+                <button type="button" class="password-toggle-btn" data-target="profile-password-confirmation" aria-label="Mostrar contraseña">Ver</button>
+            </div>
+            <button class="btn-gold w-full mt-4" type="submit">Actualizar contraseña</button>
+        </form>
+    </section>
+
+    <section class="profile-panel danger-panel">
+        <h2>Eliminar cuenta</h2>
+        <p class="profile-delete-description">Tu cuenta y sus datos se eliminarán permanentemente. Esta acción no se puede deshacer.</p>
+        <button class="profile-delete-trigger" type="button" id="profile-delete-trigger" aria-expanded="false" aria-controls="profile-delete-confirmation">Eliminar mi cuenta</button>
+        <div class="profile-delete-confirmation" id="profile-delete-confirmation" hidden>
+            <p>Confirma la eliminación ingresando tu contraseña actual.</p>
+            <form class="profile-edit-form" data-profile-action>
+                <input type="hidden" name="action" value="account_delete">
+                <input type="hidden" name="csrf_token" data-csrf-token>
+                <label for="profile-delete-password">Contraseña actual</label>
+                <div class="profile-password-field">
+                    <input id="profile-delete-password" type="password" name="password" class="input-gold" autocomplete="current-password" required>
+                    <button type="button" class="password-toggle-btn" data-target="profile-delete-password" aria-label="Mostrar contraseña">Ver</button>
+                </div>
+                <div class="profile-delete-actions">
+                    <button class="profile-delete-cancel" type="button" id="profile-delete-cancel">Cancelar</button>
+                    <button class="profile-delete-submit" type="submit">Confirmar eliminación</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Clase 1 - PARSEÑAS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="base.css?v=alfa-mascota-position-4">
+ <link rel="stylesheet" href="clase-steps.css">
+ <script defer src="inicio.js?v=alfa-pet-upload-1"></script>
+ <script defer src="clase-steps.js?v=alfa-mascota-position-2"></script>
+</head>
+<body class="theme-dark">
+
+<header class="top-bar" aria-label="Navegación principal">
+ <a href="index.html" class="brand-label">PARSEÑAS</a>
+ <nav class="menu-rectangulo" aria-label="Secciones"><a href="index.html#top">Inicio</a><a href="index.html#clases">Clases</a><a href="index.html#contacto">Contáctanos</a></nav>
+ <form class="search-form" action="index.html#clases" method="get" role="search"><input class="search-input" name="q" type="search" placeholder="Buscar palabra o una clase..." aria-label="Buscar"><button class="search-btn" type="submit" aria-label="Buscar">&#128269;</button></form>
+ <div class="auth-actions" id="auth-actions"><a href="register.html" class="auth-btn" id="btn-registrarme">Registrarme</a><a href="login.html" class="auth-btn" id="btn-login">Iniciar sesión</a><span class="user-greeting" id="user-greeting" hidden></span></div>
+ <div class="profile-menu-wrapper" hidden><button type="button" id="profile-btn" aria-label="Abrir preferencias" aria-expanded="false">⚙</button><div class="profile-menu" id="profile-menu" hidden><p class="profile-menu-title">Preferencias</p><label class="profile-option" for="theme-toggle"><span>Tema claro</span><input type="checkbox" id="theme-toggle"></label><label class="profile-option" for="font-size-select"><span>Tamaño de texto</span><select id="font-size-select"><option value="normal">Normal</option><option value="large">Grande</option><option value="xl">Muy grande</option></select></label><div class="profile-menu-actions"><button type="button" class="profile-action-btn" id="toggle-mascota-btn">Ocultar mascota</button><a href="perfil.html" class="profile-action-btn" id="link-perfil">Editar perfil</a><a href="cerrar_sesion.php" class="profile-action-btn" id="link-logout">Cerrar sesión</a></div></div></div>
+</header>
+
+<main>
+<div class="lesson-shell" data-lesson="1" data-total="17" data-current="1" data-authenticated="0" data-evaluation-failed="0">
+
+ <header class="lesson-heading">
+    <span class="section-label">Clase 1</span>
+    <h1>Alfabeto Manual y Deletreo</h1>
+    <p>Reconoce las letras del alfabeto manual colombiano, deletrea palabras sencillas y comprende cuándo usar el deletreo en una conversación.</p>
+ </header>
+
+ <div class="lesson-progress-wrap">
+    <div class="lesson-progress" role="progressbar" aria-label="Progreso de la clase" aria-valuemin="0" aria-valuemax="100" aria-valuenow="6">
+      <div class="lesson-progress-bar" id="lesson-progress-bar" style="width: 6%"></div>
+    </div>
+    <p class="lesson-progress-label">
+      Paso <span id="lesson-step-value">1</span> de 17 —
+      <span id="lesson-progress-value">6</span>% completado
+    </p>
+ </div>
+
+ <ol class="lesson-steps-nav" id="lesson-steps-nav" aria-label="Pasos de la clase">
+        <li><button type="button" class="lesson-step-dot is-active" data-goto="1" aria-label="Ir al paso 1: Objetivo de la clase"><span class="lesson-step-dot-number">1</span><span class="lesson-step-dot-title">Objetivo de la clase</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="2" disabled aria-label="Ir al paso 2: Introducción"><span class="lesson-step-dot-number">2</span><span class="lesson-step-dot-title">Introducción</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="3" disabled aria-label="Ir al paso 3: ¿Qué es el alfabeto manual?"><span class="lesson-step-dot-number">3</span><span class="lesson-step-dot-title">¿Qué es el alfabeto manual?</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="4" disabled aria-label="Ir al paso 4: Ejemplo"><span class="lesson-step-dot-number">4</span><span class="lesson-step-dot-title">Ejemplo</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="5" disabled aria-label="Ir al paso 5: Conociendo las letras"><span class="lesson-step-dot-number">5</span><span class="lesson-step-dot-title">Conociendo las letras</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="6" disabled aria-label="Ir al paso 6: Grupo 1"><span class="lesson-step-dot-number">6</span><span class="lesson-step-dot-title">Grupo 1</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="7" disabled aria-label="Ir al paso 7: Mini prueba"><span class="lesson-step-dot-number">7</span><span class="lesson-step-dot-title">Mini prueba</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="8" disabled aria-label="Ir al paso 8: Grupo 2"><span class="lesson-step-dot-number">8</span><span class="lesson-step-dot-title">Grupo 2</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="9" disabled aria-label="Ir al paso 9: Mini prueba"><span class="lesson-step-dot-number">9</span><span class="lesson-step-dot-title">Mini prueba</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="10" disabled aria-label="Ir al paso 10: Grupo 3"><span class="lesson-step-dot-number">10</span><span class="lesson-step-dot-title">Grupo 3</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="11" disabled aria-label="Ir al paso 11: Mini prueba"><span class="lesson-step-dot-number">11</span><span class="lesson-step-dot-title">Mini prueba</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="12" disabled aria-label="Ir al paso 12: Grupo 4"><span class="lesson-step-dot-number">12</span><span class="lesson-step-dot-title">Grupo 4</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="13" disabled aria-label="Ir al paso 13: Mini prueba"><span class="lesson-step-dot-number">13</span><span class="lesson-step-dot-title">Mini prueba</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="14" disabled aria-label="Ir al paso 14: Mini prueba de deletreo"><span class="lesson-step-dot-number">14</span><span class="lesson-step-dot-title">Mini prueba de deletreo</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="15" disabled aria-label="Ir al paso 15: Errores comunes"><span class="lesson-step-dot-number">15</span><span class="lesson-step-dot-title">Errores comunes</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="16" disabled aria-label="Ir al paso 16: Resumen de la lección"><span class="lesson-step-dot-number">16</span><span class="lesson-step-dot-title">Resumen de la lección</span></button></li>
+        <li><button type="button" class="lesson-step-dot" data-goto="17" disabled aria-label="Ir al paso 17: Evaluación"><span class="lesson-step-dot-number">17</span><span class="lesson-step-dot-title">Evaluación</span></button></li>
+ </ol>
+
+ <section class="lesson-step" aria-live="polite">
+      <article class="lesson-step-card" data-step="1">
+        <span class="lesson-step-badge lesson-step-badge-intro">📖 Introducción</span>
+        <span class="lesson-step-number">Paso 1 de 17</span>
+        <h2>Objetivo de la clase</h2>
+<p class="lesson-step-text">Al finalizar esta lección, el estudiante será capaz de reconocer las letras del alfabeto manual colombiano, realizar el deletreo de palabras sencillas y comprender cuándo utilizar el deletreo dentro de una conversación en Lengua de Señas Colombiana.</p>
+
+      </article>
+      <article class="lesson-step-card" data-step="2" hidden>
+        <span class="lesson-step-badge lesson-step-badge-media">🎬 Seña / Demostración</span>
+        <span class="lesson-step-number">Paso 2 de 17</span>
+        <h2>Introducción</h2>
+<p class="lesson-step-text">En la clase anterior aprendiste qué es la Lengua de Señas Colombiana y por qué es importante para la comunicación y la inclusión.</p>
+<p class="lesson-step-text">Ahora aprenderás una de las herramientas fundamentales para cualquier principiante: el alfabeto manual.</p>
+<p class="lesson-step-text">El alfabeto manual permite representar letras mediante posiciones específicas de la mano. Gracias a él podemos deletrear nombres, lugares, palabras desconocidas o términos que no poseen una seña específica.</p>
+<p class="lesson-step-text">Aprender el alfabeto es como aprender las piezas básicas de un rompecabezas. Aunque no se utiliza para todas las palabras, conocerlo te ayudará a comunicarte con mayor precisión.</p>
+
+      </article>
+      <article class="lesson-step-card" data-step="3" hidden>
+        <span class="lesson-step-badge lesson-step-badge-practice">✍️ Práctica</span>
+        <span class="lesson-step-number">Paso 3 de 17</span>
+        <h2>¿Qué es el alfabeto manual?</h2>
+<p class="lesson-step-text">El alfabeto manual es un conjunto de configuraciones de la mano que representan las letras del alfabeto.</p>
+<p class="lesson-step-text">Cada letra posee una forma específica y reconocible.</p>
+<p class="lesson-step-text">Aunque muchas palabras tienen señas propias, existen situaciones en las que es necesario deletrear.</p>
+<ul class="lesson-content-list">
+ <li>Nombres propios.</li>
+ <li>Apellidos.</li>
+ <li>Nombres de ciudades.</li>
+ <li>Marcas.</li>
+ <li>Palabras nuevas.</li>
+ <li>Términos técnicos.</li>
+</ul>
+
+      </article>
+      <article class="lesson-step-card" data-step="4" hidden>
+        <span class="lesson-step-badge lesson-step-badge-intro">📖 Introducción</span>
+        <span class="lesson-step-number">Paso 4 de 17</span>
+        <h2>Ejemplo</h2>
+<p class="lesson-step-text">Si deseas comunicar tu nombre y no existe una seña personal asignada, puedes deletrearlo utilizando el alfabeto manual. Por ejemplo, puedes deletrear “Nicolás” letra por letra.</p>
+<div class="lesson-document-gallery">
+ <img src="assets/clase1/image1.jpeg" alt="Alfabeto manual: Ejemplo">
+ <img src="assets/clase1/image2.jpeg" alt="Alfabeto manual: Ejemplo">
+ <img src="assets/clase1/image3.jpeg" alt="Alfabeto manual: Ejemplo">
+ <img src="assets/clase1/image4.jpeg" alt="Alfabeto manual: Ejemplo">
+ <img src="assets/clase1/image5.jpeg" alt="Alfabeto manual: Ejemplo">
+ <img src="assets/clase1/image6.jpeg" alt="Alfabeto manual: Ejemplo">
+ <img src="assets/clase1/image7.jpeg" alt="Alfabeto manual: Ejemplo">
+</div>
+
+      </article>
+      <article class="lesson-step-card" data-step="5" hidden>
+        <span class="lesson-step-badge lesson-step-badge-media">🎬 Seña / Demostración</span>
+        <span class="lesson-step-number">Paso 5 de 17</span>
+        <h2>Conociendo las letras</h2>
+<p class="lesson-step-text">A continuación encontrarás las letras del alfabeto manual colombiano. Estudia cada configuración con calma y compara la posición de los dedos y la mano.</p>
+
+      </article>
+      <article class="lesson-step-card" data-step="6" hidden>
+        <span class="lesson-step-badge lesson-step-badge-practice">✍️ Práctica</span>
+        <span class="lesson-step-number">Paso 6 de 17</span>
+        <h2>Grupo 1</h2>
+<p class="lesson-step-text">Grupo 1: A, B, C, D y E. Practica cada posición antes de continuar.</p>
+<div class="lesson-document-gallery">
+ <img src="assets/clase1/image8.jpeg" alt="Alfabeto manual: Grupo 1">
+ <img src="assets/clase1/image9.jpeg" alt="Alfabeto manual: Grupo 1">
+ <img src="assets/clase1/image10.jpeg" alt="Alfabeto manual: Grupo 1">
+ <img src="assets/clase1/image11.jpeg" alt="Alfabeto manual: Grupo 1">
+ <img src="assets/clase1/image12.jpeg" alt="Alfabeto manual: Grupo 1">
+</div>
+
+      </article>
+      <article class="lesson-step-card" data-step="7" hidden>
+        <span class="lesson-step-badge lesson-step-badge-intro">📖 Introducción</span>
+        <span class="lesson-step-number">Paso 7 de 17</span>
+        <h2>Mini prueba</h2>
+<p class="lesson-step-text">Observa la imagen y responde mentalmente qué letra representa la mano mostrada.</p>
+
+      </article>
+      <article class="lesson-step-card" data-step="8" hidden>
+        <span class="lesson-step-badge lesson-step-badge-media">🎬 Seña / Demostración</span>
+        <span class="lesson-step-number">Paso 8 de 17</span>
+        <h2>Grupo 2</h2>
+<p class="lesson-step-text">Grupo 2: E, F, G, H, I, J y K. Revisa las diferencias entre las configuraciones parecidas.</p>
+<div class="lesson-document-gallery">
+ <img src="assets/clase1/image13.jpeg" alt="Alfabeto manual: Grupo 2">
+ <img src="assets/clase1/image14.jpeg" alt="Alfabeto manual: Grupo 2">
+ <img src="assets/clase1/image15.jpeg" alt="Alfabeto manual: Grupo 2">
+ <img src="assets/clase1/image16.jpeg" alt="Alfabeto manual: Grupo 2">
+ <img src="assets/clase1/image17.jpeg" alt="Alfabeto manual: Grupo 2">
+ <img src="assets/clase1/image18.jpeg" alt="Alfabeto manual: Grupo 2">
+ <img src="assets/clase1/image19.jpeg" alt="Alfabeto manual: Grupo 2">
+</div>
+
+      </article>
+      <article class="lesson-step-card" data-step="9" hidden>
+        <span class="lesson-step-badge lesson-step-badge-practice">✍️ Práctica</span>
+        <span class="lesson-step-number">Paso 9 de 17</span>
+        <h2>Mini prueba</h2>
+<p class="lesson-step-text">Mini prueba: observa la imagen y elige la letra que representa la mano mostrada.</p>
+
+      </article>
+      <article class="lesson-step-card" data-step="10" hidden>
+        <span class="lesson-step-badge lesson-step-badge-intro">📖 Introducción</span>
+        <span class="lesson-step-number">Paso 10 de 17</span>
+        <h2>Grupo 3</h2>
+<p class="lesson-step-text">Grupo 3: L, M, N, Ñ, O, P, Q y R. Practica lentamente y mantén la mano visible.</p>
+<div class="lesson-document-gallery">
+ <img src="assets/clase1/image20.jpeg" alt="Alfabeto manual: Grupo 3">
+ <img src="assets/clase1/image21.jpeg" alt="Alfabeto manual: Grupo 3">
+ <img src="assets/clase1/image22.jpeg" alt="Alfabeto manual: Grupo 3">
+ <img src="assets/clase1/image23.jpeg" alt="Alfabeto manual: Grupo 3">
+ <img src="assets/clase1/image24.jpeg" alt="Alfabeto manual: Grupo 3">
+ <img src="assets/clase1/image25.jpeg" alt="Alfabeto manual: Grupo 3">
+ <img src="assets/clase1/image26.jpeg" alt="Alfabeto manual: Grupo 3">
+ <img src="assets/clase1/image27.jpeg" alt="Alfabeto manual: Grupo 3">
+</div>
+
+      </article>
+      <article class="lesson-step-card" data-step="11" hidden>
+        <span class="lesson-step-badge lesson-step-badge-media">🎬 Seña / Demostración</span>
+        <span class="lesson-step-number">Paso 11 de 17</span>
+        <h2>Mini prueba</h2>
+<p class="lesson-step-text">Mini prueba: identifica la letra representada por la mano observada.</p>
+
+      </article>
+      <article class="lesson-step-card" data-step="12" hidden>
+        <span class="lesson-step-badge lesson-step-badge-practice">✍️ Práctica</span>
+        <span class="lesson-step-number">Paso 12 de 17</span>
+        <h2>Grupo 4</h2>
+<p class="lesson-step-text">Grupo 4: S, T, U, V, W, X, Y y Z. Repasa cada forma y corrige la posición de los dedos.</p>
+<div class="lesson-document-gallery">
+ <img src="assets/clase1/image28.jpeg" alt="Alfabeto manual: Grupo 4">
+ <img src="assets/clase1/image29.jpeg" alt="Alfabeto manual: Grupo 4">
+ <img src="assets/clase1/image30.jpeg" alt="Alfabeto manual: Grupo 4">
+ <img src="assets/clase1/image31.jpeg" alt="Alfabeto manual: Grupo 4">
+ <img src="assets/clase1/image32.jpeg" alt="Alfabeto manual: Grupo 4">
+ <img src="assets/clase1/image33.jpeg" alt="Alfabeto manual: Grupo 4">
+ <img src="assets/clase1/image34.jpeg" alt="Alfabeto manual: Grupo 4">
+ <img src="assets/clase1/image35.jpeg" alt="Alfabeto manual: Grupo 4">
+</div>
+
+      </article>
+      <article class="lesson-step-card" data-step="13" hidden>
+        <span class="lesson-step-badge lesson-step-badge-intro">📖 Introducción</span>
+        <span class="lesson-step-number">Paso 13 de 17</span>
+        <h2>Mini prueba</h2>
+<p class="lesson-step-text">Mini prueba: observa las imágenes y reconoce las letras del último grupo.</p>
+
+      </article>
+      <article class="lesson-step-card" data-step="14" hidden>
+        <span class="lesson-step-badge lesson-step-badge-media">🎬 Seña / Demostración</span>
+        <span class="lesson-step-number">Paso 14 de 17</span>
+        <h2>Mini prueba de deletreo</h2>
+<p class="lesson-step-text">Observa las imágenes y practica el deletreo de palabras sencillas, como “sol”, uniendo cada letra con claridad.</p>
+<div class="lesson-document-gallery">
+ <img src="assets/clase1/image36.jpeg" alt="Alfabeto manual: Mini prueba de deletreo">
+ <img src="assets/clase1/image37.jpeg" alt="Alfabeto manual: Mini prueba de deletreo">
+ <img src="assets/clase1/image38.jpeg" alt="Alfabeto manual: Mini prueba de deletreo">
+ <img src="assets/clase1/image39.jpeg" alt="Alfabeto manual: Mini prueba de deletreo">
+ <img src="assets/clase1/image40.jpeg" alt="Alfabeto manual: Mini prueba de deletreo">
+ <img src="assets/clase1/image41.jpeg" alt="Alfabeto manual: Mini prueba de deletreo">
+ <img src="assets/clase1/image42.jpeg" alt="Alfabeto manual: Mini prueba de deletreo">
+ <img src="assets/clase1/image43.jpeg" alt="Alfabeto manual: Mini prueba de deletreo">
+ <img src="assets/clase1/image44.jpeg" alt="Alfabeto manual: Mini prueba de deletreo">
+</div>
+
+      </article>
+      <article class="lesson-step-card" data-step="15" hidden>
+        <span class="lesson-step-badge lesson-step-badge-practice">✍️ Práctica</span>
+        <span class="lesson-step-number">Paso 15 de 17</span>
+        <h2>Errores comunes</h2>
+<p class="lesson-step-text">Mover demasiado las manos dificulta la comprensión. Realiza movimientos claros y controlados.</p>
+<p class="lesson-step-text">Confundir letras parecidas es normal al principio. Practica observando cuidadosamente cada posición.</p>
+<p class="lesson-step-text">Intentar ir demasiado rápido reduce la precisión. Prioriza la precisión antes que la velocidad.</p>
+
+      </article>
+      <article class="lesson-step-card" data-step="16" hidden>
+        <span class="lesson-step-badge lesson-step-badge-intro">📖 Introducción</span>
+        <span class="lesson-step-number">Paso 16 de 17</span>
+        <h2>Resumen de la lección</h2>
+<p class="lesson-step-text">En esta clase aprendiste:</p>
+<p class="lesson-step-text">El alfabeto manual es una de las herramientas más importantes para comenzar a comunicarse en Lengua de Señas Colombiana.</p>
+<ul class="lesson-content-list">
+ <li>Qué es el alfabeto manual.</li>
+ <li>Para qué sirve.</li>
+ <li>Cuándo utilizarlo.</li>
+ <li>Cómo practicarlo correctamente.</li>
+ <li>Cómo deletrear palabras simples.</li>
+</ul>
+
+      </article>
+      <article class="lesson-step-card" data-step="17" hidden>
+        <span class="lesson-step-badge lesson-step-badge-media">🎬 Seña / Demostración</span>
+        <span class="lesson-step-number">Paso 17 de 17</span>
+        <h2>Evaluación</h2>
+<p class="lesson-step-text">Responde las 10 preguntas. Necesitas acertar al menos 8 para aprobar con un mínimo del 75%.</p>
+<form id="lesson-quiz" class="lesson-quiz" data-lesson="1">
+ <p class="lesson-step-text lesson-quiz-hint">Responde todas las preguntas. Necesitas al menos el 75% para aprobar y desbloquear la siguiente clase.</p>
+ <fieldset class="lesson-question" data-question="0" data-answer="0">
+    <legend>1. ¿Para qué sirve el alfabeto manual?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-0" value="0" required>
+      <span>A. Representar letras mediante señas.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-0" value="1" required>
+      <span>B. Representar sonidos musicales.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-0" value="2" required>
+      <span>C. Representar números.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-0" value="3" required>
+      <span>D. Representar colores.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="1" data-answer="1">
+    <legend>2. ¿Es necesario deletrear todas las palabras?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-1" value="0" required>
+      <span>A. Sí.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-1" value="1" required>
+      <span>B. No.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="2" data-answer="0">
+    <legend>3. ¿Cuál de los siguientes elementos suele deletrearse?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-2" value="0" required>
+      <span>A. Nombre propio.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-2" value="1" required>
+      <span>B. Saludo común.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-2" value="2" required>
+      <span>C. Emoción básica.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-2" value="3" required>
+      <span>D. Color.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="3" data-answer="0">
+    <legend>4. ¿Qué se recomienda al practicar?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-3" value="0" required>
+      <span>A. Precisión.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-3" value="1" required>
+      <span>B. Desorden.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-3" value="2" required>
+      <span>C. Velocidad excesiva.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-3" value="3" required>
+      <span>D. Improvisación.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="4" data-answer="0">
+    <legend>5. ¿Cuál es la mejor forma de comenzar?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-4" value="0" required>
+      <span>A. Lentamente y con precisión.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-4" value="1" required>
+      <span>B. Lo más rápido posible.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-4" value="2" required>
+      <span>C. Sin observar la mano.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-4" value="3" required>
+      <span>D. Cambiando constantemente de posición.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="5" data-answer="0">
+    <legend>6. ¿Qué permite el deletreo?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-5" value="0" required>
+      <span>A. Comunicar nombres y palabras específicas.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-5" value="1" required>
+      <span>B. Reemplazar toda la lengua de señas.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-5" value="2" required>
+      <span>C. Evitar aprender señas.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-5" value="3" required>
+      <span>D. Hablar más fuerte.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="6" data-answer="1">
+    <legend>7. ¿Las palabras comunes siempre se deletrean?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-6" value="0" required>
+      <span>A. Sí.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-6" value="1" required>
+      <span>B. No.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="7" data-answer="0">
+    <legend>8. ¿Qué ayuda a mejorar el aprendizaje?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-7" value="0" required>
+      <span>A. La práctica constante.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-7" value="1" required>
+      <span>B. Practicar una sola vez.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-7" value="2" required>
+      <span>C. Memorizar sin observar.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-7" value="3" required>
+      <span>D. Ignorar los errores.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="8" data-answer="0">
+    <legend>9. ¿Qué debes mantener visible durante el deletreo?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-8" value="0" required>
+      <span>A. La mano.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-8" value="1" required>
+      <span>B. El pie.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-8" value="2" required>
+      <span>C. El hombro.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-8" value="3" required>
+      <span>D. El codo.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <fieldset class="lesson-question" data-question="9" data-answer="0">
+    <legend>10. ¿Qué representa cada posición del alfabeto manual?</legend>
+    <label class="lesson-option" data-option="0">
+      <input type="radio" name="answer-9" value="0" required>
+      <span>A. Una letra.</span>
+    </label>
+    <label class="lesson-option" data-option="1">
+      <input type="radio" name="answer-9" value="1" required>
+      <span>B. Una palabra.</span>
+    </label>
+    <label class="lesson-option" data-option="2">
+      <input type="radio" name="answer-9" value="2" required>
+      <span>C. Una oración.</span>
+    </label>
+    <label class="lesson-option" data-option="3">
+      <input type="radio" name="answer-9" value="3" required>
+      <span>D. Un número.</span>
+    </label>
+    <p class="lesson-question-result" aria-live="polite"></p>
+ </fieldset>
+ <button type="submit" class="btn-hero btn-hero-solid" id="lesson-quiz-submit">Calificar evaluación</button>
+ <p id="lesson-quiz-result" class="lesson-quiz-result" role="status" aria-live="polite"></p>
+ <button type="button" id="lesson-restart" class="btn-hero btn-hero-outline is-hidden">Reiniciar lección</button>
+</form>
+
+      </article>
+ </section>
+
+ <div class="lesson-controls">
+    <a class="btn-hero btn-hero-outline" href="clase-0.html" aria-label="Ir a la clase anterior">‹ Clase anterior</a>
+
+    <div class="lesson-controls-main" style="display:flex; flex-wrap:wrap; align-items:center; gap:12px;">
+      <button class="btn-hero btn-hero-outline" id="lesson-previous" type="button" data-previous-url="clase-0.html">Anterior</button>
+      <button class="btn-hero btn-hero-solid" id="lesson-next" type="button">Siguiente <span class="btn-arrow">›</span></button>
+      <a class="btn-hero btn-hero-solid" id="lesson-next-class" href="clase-2.html?desde=1" aria-label="Ir a la siguiente clase">Siguiente clase <span class="btn-arrow">›</span></a>
+    </div>
+ </div>
+</div>
+</main>
+
+</body>
+</html>

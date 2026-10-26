@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - PARSEÑAS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="base.css?v=alfa-mascota-position-4">
+    <script defer src="inicio.js?v=alfa-pet-upload-1"></script>
+    <script defer src="auth.js?v=2"></script>
+</head>
+<body>
+
+<header class="top-bar top-bar-auth">
+    <a href="index.html" class="brand-label">PARSEÑAS</a>
+    <div class="profile-menu-wrapper">
+        <button type="button" id="profile-btn" aria-label="Abrir preferencias" aria-expanded="false">⚙</button>
+        <div class="profile-menu" id="profile-menu" hidden>
+            <p class="profile-menu-title">Preferencias</p>
+            <label class="profile-option" for="theme-toggle">
+                <span>Tema claro</span>
+                <input type="checkbox" id="theme-toggle">
+            </label>
+            <label class="profile-option" for="font-size-select">
+                <span>Tamaño de texto</span>
+                <select id="font-size-select">
+                    <option value="normal">Normal</option>
+                    <option value="large">Grande</option>
+                    <option value="xl">Muy grande</option>
+                </select>
+            </label>
+        </div>
+    </div>
+</header>
+
+<main>
+<div class="form-container" style="position:relative;">
+    <a href="index.html" style="display:inline-flex; align-items:center; gap:8px; color:#d4af37; text-decoration:none; font-weight:700; margin-bottom:16px;">
+        <span aria-hidden="true">←</span>
+        Volver al inicio
+    </a>
+
+    <h1 class="brand-title" style="font-size:42px; text-align:center; margin-bottom:20px;">
+        Iniciar sesión
+    </h1>
+    <p class="profile-success" id="login-status" role="status" hidden>Tu contraseña se cambió correctamente. Ya puedes iniciar sesión.</p>
+
+    <form id="login-form" method="POST" action="iniciar_sesion.php">
+        <input type="hidden" name="redirect" id="login-redirect">
+        <!-- Login: correo, teléfono o usuario -->
+        <label>Correo, teléfono o usuario</label>
+        <input type="text" name="login" id="login"
+            class="input-gold"
+            placeholder="Ingresa tu correo, teléfono o usuario"
+            required>
+        <p class="error-text" id="error-login" hidden></p>
+
+        <!-- Contraseña -->
+        <label>Contraseña</label>
+        <div style="position:relative;">
+            <input id="login-password" type="password" name="password"
+                class="input-gold"
+                placeholder="Ingresa tu contraseña"
+                style="width:100%; padding-right:48px;"
+                required>
+            <button type="button" class="password-toggle-btn" data-target="login-password" aria-label="Mostrar contraseña" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:#d4af37; cursor:pointer; font-weight:700;">Ver</button>
+        </div>
+        <p class="error-text" id="error-password" hidden></p>
+
+        <div style="display:flex; justify-content:flex-end; margin-top:4px; margin-bottom:14px;">
+            <a href="recuperar_password.html" style="color:#d4af37; text-decoration:none; font-size:0.9rem;">
+                ¿Olvidaste tu contraseña?
+            </a>
+        </div>
+
+        <p class="error-text" id="error-form" hidden></p>
+
+        <button class="btn-gold w-full mt-4" type="submit">Entrar</button>
+    </form>
+
+    <p class="form-link">¿No tienes cuenta? <a href="register.html" style="color:#d4af37; font-weight:700;">Regístrate</a></p>
+</div>
+</main>
+
+</body>
+</html>

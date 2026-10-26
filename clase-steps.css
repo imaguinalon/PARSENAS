@@ -1,0 +1,120 @@
+/* ============================================================
+   PARSEÑAS — Sistema de clases "Paso a Paso" (Stepper)
+   ------------------------------------------------------------
+   Cómo usarlo en una vista de clase (clase-N.blade.php):
+
+   <div class="clase-stepper" data-next-url="{{ route('clase-2') }}">
+     <div class="clase-stepper-head">
+       <h1 class="brand-title clase-stepper-title">Título de la clase</h1>
+       <div class="clase-progress"><div class="clase-progress-fill"></div></div>
+       <p class="clase-progress-label"></p>
+     </div>
+
+     <section class="clase-step" data-step-title="Introducción">
+       ...contenido del paso 1...
+     </section>
+     <section class="clase-step" data-step-title="Seña en video">
+       ...contenido del paso 2...
+     </section>
+
+     <!-- Los botones Anterior/Siguiente los inyecta clase-steps.js -->
+   </div>
+
+   Solo tienes que escribir/Editar secciones .clase-step. Todo lo demás
+   (barra, botones, contador, mini-mapa de pasos) es automático.
+   ============================================================ */
+
+/* ── Contenedor general ── */
+.clase-stepper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+
+.clase-stepper-title {
+  font-size: clamp(28px, 5vw, 42px);
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* ── Barra de progreso ── */
+.clase-progress {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--border, #3a3a3a);
+  overflow: hidden;
+}
+
+.clase-progress-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #d4af37, #f5e7b0);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.55);
+  transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.clase-progress-label {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #f5e7b0;
+  margin: 10px 0 22px;
+  letter-spacing: 0.02em;
+}
+
+/* ── Pasos: solo se muestra el activo ── */
+.clase-step {
+  display: none;
+}
+
+.clase-step.is-active {
+  display: block;
+  animation: claseStepIn 0.35s ease both;
+}
+
+@keyframes claseStepIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.clase-step h2 {
+  color: #d4af37;
+  font-size: 1.5rem;
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.clase-step h2::before {
+  content: attr(data-badge, '');
+}
+
+/* Número dorado junto al título (lo pinta el JS) */
+.clase-step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 34px;
+  padding: 0 6px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #d4af37, #b8912a);
+  color: #1a1a1a;
+  font-size: 1rem;
+  font-weight: 800;
+  flex: none;
+}
+
+.clase-step p {
+  line-height: 1.7;
+  color: inherit;
+}

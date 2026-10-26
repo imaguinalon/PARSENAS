@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarme - PARSEÑAS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="base.css?v=alfa-mascota-position-4">
+    <script defer src="inicio.js?v=alfa-pet-upload-1"></script>
+    <script defer src="auth.js?v=2"></script>
+    <script defer src="password-requirements.js?v=parseñas-rules-1"></script>
+    <style>
+        .pw-checklist ul { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 4px; }
+        .pw-checklist li { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: #e05252; transition: color .2s ease; }
+        .pw-checklist .pw-icon::before { content: '✕'; font-weight: 700; }
+        .pw-checklist li.valid { color: #2e9e5b; }
+        .pw-checklist li.valid .pw-icon::before { content: '✓'; }
+    </style>
+</head>
+<body>
+
+<header class="top-bar top-bar-auth">
+    <a href="index.html" class="brand-label">PARSEÑAS</a>
+    <div class="profile-menu-wrapper">
+        <button type="button" id="profile-btn" aria-label="Abrir preferencias" aria-expanded="false">⚙</button>
+        <div class="profile-menu" id="profile-menu" hidden>
+            <p class="profile-menu-title">Preferencias</p>
+            <label class="profile-option" for="theme-toggle">
+                <span>Tema claro</span>
+                <input type="checkbox" id="theme-toggle">
+            </label>
+            <label class="profile-option" for="font-size-select">
+                <span>Tamaño de texto</span>
+                <select id="font-size-select">
+                    <option value="normal">Normal</option>
+                    <option value="large">Grande</option>
+                    <option value="xl">Muy grande</option>
+                </select>
+            </label>
+        </div>
+    </div>
+</header>
+
+<main>
+<div class="form-container" style="position:relative;">
+    <a href="index.html" style="display:inline-flex; align-items:center; gap:8px; color:#d4af37; text-decoration:none; font-weight:700; margin-bottom:16px;">
+        <span aria-hidden="true">←</span>
+        Volver al inicio
+    </a>
+
+    <h1 class="brand-title" style="font-size:42px; text-align:center; margin-bottom:20px;">
+        Crear cuenta
+    </h1>
+
+    <form id="register-form" method="POST" action="registrar.php">
+        <!-- Nombre -->
+        <label>Nombre</label>
+        <input type="text" name="name" id="name" class="input-gold" required>
+        <p class="error-text" id="error-name" hidden></p>
+
+        <label>Apellido (opcional)</label>
+        <input type="text" name="apellido" id="apellido" class="input-gold">
+
+        <!-- Email -->
+        <label>Email</label>
+        <input type="email" name="email" id="email" class="input-gold" required>
+        <p class="error-text" id="error-email" hidden></p>
+
+        <!-- Teléfono -->
+        <label>Teléfono</label>
+        <div class="phone-wrapper" id="phone-wrapper">
+            <select id="telefono_prefijo" name="telefono_prefijo" class="phone-prefix" aria-label="Prefijo internacional">
+                <option value="">Prefijo</option>
+            </select>
+            <input id="phone" name="phone" class="phone-number" type="tel" placeholder="300 123 4567">
+        </div>
+        <p class="error-text" id="error-phone" hidden></p>
+
+        <!-- Contraseña -->
+        <label>Contraseña</label>
+        <div style="position:relative;">
+            <input id="register-password" type="password" name="password" class="input-gold" style="width:100%; padding-right:48px;" required>
+            <button type="button" class="password-toggle-btn" data-target="register-password" aria-label="Mostrar contraseña" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:#d4af37; cursor:pointer; font-weight:700;">Ver</button>
+        </div>
+        <div class="pw-checklist" data-pw-target="register-password" hidden>
+            <ul>
+                <li data-rule="length"><span class="pw-icon" aria-hidden="true"></span>Mínimo 8 caracteres</li>
+                <li data-rule="uppercase"><span class="pw-icon" aria-hidden="true"></span>Una letra mayúscula</li>
+                <li data-rule="number"><span class="pw-icon" aria-hidden="true"></span>Un número</li>
+                <li data-rule="special"><span class="pw-icon" aria-hidden="true"></span>Un carácter especial</li>
+            </ul>
+        </div>
+
+        <!-- Confirmar contraseña -->
+        <label>Confirmar contraseña</label>
+        <div style="position:relative;">
+            <input id="register-password-confirmation" type="password" name="password_confirmation" class="input-gold" style="width:100%; padding-right:48px;" required>
+            <button type="button" class="password-toggle-btn" data-target="register-password-confirmation" aria-label="Mostrar contraseña" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:#d4af37; cursor:pointer; font-weight:700;">Ver</button>
+        </div>
+        <p class="error-text" id="error-password" hidden></p>
+
+        <p class="error-text" id="error-form" hidden></p>
+
+        <button class="btn-gold w-full mt-4" type="submit">Registrarme</button>
+    </form>
+
+    <p class="form-link">¿Ya tienes cuenta? <a href="login.html" style="color:#d4af37; font-weight:700;">Inicia sesión</a></p>
+
+</div>
+</main>
+
+</body>
+</html>
